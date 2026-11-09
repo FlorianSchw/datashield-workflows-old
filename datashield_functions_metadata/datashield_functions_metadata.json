@@ -4,8 +4,19 @@
     "function_name": "add_dsPackage",
     "architecture_type": "other",
     "function_type": "other",
-    "title": "Function to add dsPackages to the 01_DSLite_Setup.R file ABCDDE",
-    "description": "XXX",
+    "title": "Register DataSHIELD packages in the DSLite setup script",
+    "description": "Adds one or more DataSHIELD server-side packages (and their client-side counterparts) to the project's DSLite setup script and dependency tracking file.",
+    "category": "",
+    "status": "",
+    "test_file": true
+  },
+  {
+    "package": "dsAnalysis",
+    "function_name": "check_project",
+    "architecture_type": "other",
+    "function_type": "other",
+    "title": "Checks that the installed packages match the project's renv.lock",
+    "description": "Compares the packages installed in the current project library with those recorded in renv.lock and reports any differences. Optionally restores or snapshots the project to resolve the differences.",
     "category": "",
     "status": "",
     "test_file": true
@@ -15,8 +26,8 @@
     "function_name": "initMockData",
     "architecture_type": "other",
     "function_type": "other",
-    "title": "Function to get mock data from connected data sources",
-    "description": "The function will create a new DataSHIELD analysis project environment",
+    "title": "Generate and save synthetic mock data from server variables",
+    "description": "Builds simulated local datasets that mimic the statistical properties of a server-side data frame, then saves one .rda file per data source to a new local folder.",
     "category": "",
     "status": "",
     "test_file": true
@@ -27,10 +38,54 @@
     "architecture_type": "other",
     "function_type": "other",
     "title": "Initiate a new project environment dedicated for DataSHIELD analysis",
-    "description": "The function will create a new DataSHIELD analysis project environment",
+    "description": "Sets up a new local R project pre-configured for DataSHIELD analyses, including folder structure, starter scripts, and environment/config files for switching between live servers and local DSLite testing.",
+    "category": "",
+    "status": "",
+    "test_file": false
+  },
+  {
+    "package": "dsAnalysis",
+    "function_name": "install_dsPackage",
+    "architecture_type": "other",
+    "function_type": "other",
+    "title": "Installs DataSHIELD packages and adds them to the project",
+    "description": "Installs one or more DataSHIELD server-side packages, optionally with a matching client package, into the current renv project and registers them with the local DSLite setup.",
+    "category": "",
+    "status": "",
+    "test_file": false
+  },
+  {
+    "package": "dsAnalysis",
+    "function_name": "list_dsPackages",
+    "architecture_type": "other",
+    "function_type": "other",
+    "title": "Lists the DataSHIELD packages in the DataSHIELD package catalogue",
+    "description": "Returns a tibble of DataSHIELD packages from the package catalogue, optionally filtered by search text and status.",
     "category": "",
     "status": "",
     "test_file": true
+  },
+  {
+    "package": "dsAnalysis",
+    "function_name": "remove_dsPackage",
+    "architecture_type": "other",
+    "function_type": "other",
+    "title": "Removes DataSHIELD packages from the DSLite setup and dependencies.R",
+    "description": "Removes a DataSHIELD server-side package (and its matching client package) from the project's DSLite setup script and dependency records, optionally uninstalling them from the project library.",
+    "category": "",
+    "status": "",
+    "test_file": true
+  },
+  {
+    "package": "dsAnalysis",
+    "function_name": "sync_dsPackages",
+    "architecture_type": "other",
+    "function_type": "other",
+    "title": "Matches the local packages and DSLite setup to the DataSHIELD servers",
+    "description": "Compares package versions installed locally with those available on the connected DataSHIELD servers, and installs any that are missing or outdated.",
+    "category": "",
+    "status": "",
+    "test_file": false
   },
   {
     "package": "dsAnalysis",
