@@ -41,7 +41,18 @@
     "description": "Sets up a new local R project pre-configured for DataSHIELD analyses, including folder structure, starter scripts, and environment/config files for switching between live servers and local DSLite testing.",
     "category": "",
     "status": "",
-    "test_file": false
+    "test_file": true
+  },
+  {
+    "package": "dsAnalysis",
+    "function_name": "initVariables",
+    "architecture_type": "other",
+    "function_type": "other",
+    "title": "Describe the servers' variables in config/variables.yml",
+    "description": "Reads which variables the studies hold, their types, categories, ranges and labels, and writes them to config/variables.yml, the variable list the analysis plan builds on.",
+    "category": "",
+    "status": "",
+    "test_file": true
   },
   {
     "package": "dsAnalysis",
